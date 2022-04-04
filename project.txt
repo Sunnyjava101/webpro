@@ -1,0 +1,5 @@
+For my project, I want to create a Weather forecasting site
+that will help predict, report, and indicate weather to 
+people that have access to the site. Some features I want to
+add Live weather updates, safezones, temperature trends,
+etc...

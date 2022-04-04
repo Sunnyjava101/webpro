@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link href="styles/register.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+			<div class="header">
+                <h1>Register</h1>
+            </div>
+			<br><br>
+            <div class="register">
+				<br><br>
+                <form method="post" name="register">
+				    <label for="username"><b>Username</b></label>
+                    <input type="text" name="username" placeholder="Enter username" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+					<label for="password"><b>Password</b></label>
+                    <input type="password" id="password" name="password" placeholder="Enter password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*?[#?!@$%^&*-]).{8,}" 
+                     <label for="fname"><b>First name</b></label>
+					<input type="text" name="fname" placeholder="Enter first name" pattern="[A-Za-z]+" 
+                     <label for="lname"><b>Last name</b></label>
+					<input type="text" name="lname" placeholder="Enter last name" pattern="[A-Za-z]+"
+					 <label for="email"><b>Email</b></label>
+					<input type="email" placeholder="Enter email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
+                     <label for="date"><b>Date</b></label>
+					<input type="date" name="date"  placeholder="Desired date (year-month-day)" id="date" required>
+                    <input type="submit" name="register" value="Register"  class="registerbtn">
+                </form>
+            </div>';
+    <footer>
+        <div>
+            <p>Web Development</p>
+        </div>
+    </footer>
+
+</body>
+</html>
