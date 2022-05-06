@@ -1,0 +1,30 @@
+{
+  "name": "WebPro",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon index.js”,
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sunnyjava101/webpro.git"
+  },
+  "keywords": [
+    "weather",
+    "app"
+  ],
+  "author": "Sun Singh",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Sunnyjava101/webpro/issues"
+  },
+  "homepage": "https://github.com/Sunnyjava101/webpro#readme",
+  "dependencies": {
+    "express": "^4.18.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.16"
+  }
+}
