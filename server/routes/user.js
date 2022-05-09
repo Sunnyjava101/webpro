@@ -1,12 +1,13 @@
 const express = require('express');
 const User = require('../models/user');
 const router = express.Router();
-router.get('/', (req, res) => {
+
+router.post('/login', async (req, res) => {
  try {
- const users = User.getUsers();
- res.send(users);
+	const user = await User.login(req.body.username, req.body.password);
+	res.send( {...user, password: undefined } );
  } catch(err) {
- res.status(401).send({message: err.message});
+	res.status(401).send({message: err.message});
  }
 }); 
 
