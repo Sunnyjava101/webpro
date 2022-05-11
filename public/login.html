@@ -11,9 +11,10 @@
 
     <div class="login">
 		<h1>Weather Forecast</h1>
-        <form method="post" id="login">
+        <form method="post" id="login-form">
+			<p class="error"></p>
             <input type="text" name="username" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" placeholder="Username" id="username" required />
-            <input type="password" name="password" placeholder="Password" required>
+            <input type="password" name="password" placeholder="Password" id="pswd" required>
             <input type="submit" name="login" value="Login">
 			<input type="checkbox" id="agree" name="agree" value="agree">
 		<label for="vehicle1"> I agree to the terms and service</label><br>
@@ -23,5 +24,7 @@
         </div>
     </div>
 
+	<script type="module" src="scripts/main.js"></script>
+	<script type="module" src="scripts/user-script.js"></script>
 </body>
 </html>

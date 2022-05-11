@@ -11,10 +11,10 @@ function login(e) {
   const name = document.getElementById("username").value;
   const pswd = document.getElementById("pswd").value;
   fetchData('/users/login', {username: name, password: pswd}, "POST")
-  .then((data) => { //cathy123, 12345
+  .then((data) => { 
     if(!data.message) {
       setCurrentUser(data);
-      window.location.href = "bmi.html";
+      window.location.href = "homepage.html";
     }
   })
   .catch((error) => {
@@ -28,7 +28,7 @@ function login(e) {
 const regForm = document.getElementById("reg-form");
 if(regForm) regForm.addEventListener('submit', register);
 
-function register(e) {
+function register(e) { 
   e.preventDefault();
 
   const name = document.getElementById("username").value;
@@ -38,7 +38,7 @@ function register(e) {
   .then((data) => {
     if(!data.message) {
       setCurrentUser(data);
-      window.location.href = "bmi.html";
+      window.location.href = "homepage.html";
     }
   })
   .catch((error) => {

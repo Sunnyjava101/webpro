@@ -1,19 +1,21 @@
 const nav = document.querySelector('nav');
 if(getCurrentUser()) {
   nav.innerHTML = `
-    <ul>
-      <li><a href="bmi.html">Calculate</a></li>
-      <li><a href="profile.html">Profile</a></li>
-      <li><a id="logout">Logout</a></li>
-    </ul>
+   <ul>
+    <li><a href="profile.html">My Profile</a></li>
+    <li><a href="search.html">Search</a></li>
+    <li><a href="project.html">About</a></li>
+	<li><a href="login.html">Log Out</a></li>
+  </ul>
   `;
 } else {
   nav.innerHTML = `
-    <ul>
-      <li><a href="bmi.html">Calculate</a></li>
-      <li><a href="login.html">Login</a></li>
-      <li><a href="register.html">Sign Up</a></li>
-    </ul>
+   <ul>
+    <li><a href="profile.html">My Profile</a></li>
+    <li><a href="search.html">Search</a></li>
+    <li><a href="project.html">About</a></li>
+	<li><a href="login.html">Log Out</a></li>
+  </ul>
   `
 }
 
