@@ -1,7 +1,7 @@
 const con = require("./db_connect");
 
 async function createTable() {
-  let sql = `CREATE TABLE city (
+  let sql = `CREATE TABLE cities (
     city_id INT NOT NULL AUTO_INCREMENT,
     city VARCHAR(255) NOT NULL UNIQUE,
     country VARCHAR(255),
@@ -15,32 +15,46 @@ async function createTable() {
 
 createTable();
 
-let getCity = async () => {
-  const sql = `SELECT * FROM city`;
+let getCitys = async () => {
+  const sql = `SELECT * FROM cities`;
   return await con.query(sql);
 };
 
-async function getUser(city) {
+async function getCity(cit) {
   let sql;
-  if(user.userId) {
-    sql = `SELECT * FROM city
-      WHERE city_id = ${user.userId}
+  if(cit.cityId) {
+    sql = `SELECT * FROM cities
+      WHERE city_id = ${cit.cityId}
     `;
   } else {
-    sql = `SELECT * FROM city
-      WHERE username = "${user.username}"
+    sql = `SELECT * FROM cities
+      WHERE city = "${cit.city}"
     `;
   }
 
   return await con.query(sql);
 }
 
-async function editCity(user) {
-  const sql = `UPDATE city SET
-    city = "${user.userName}"
-    WHERE user_id = ${user.userId}
+async function register(cit) {
+ 
+  const sql = `INSERT INTO cities (city, country)
+    VALUES ("${cit.city}", "${cit.count}")
+  `;
+
+  const insert = await con.query(sql);
+  const newCity = await getCity(cit);
+  return newCity[0];
+}
+
+async function editCity(cit) {
+  const sql = `UPDATE cities SET
+    city = "${cit.cityName}"
+    WHERE city_id = ${cit.cityId}
   `;
   const update = await con.query(sql);
-  const newUser = await getUser(user);
-  return newUser[0];
+  const newCity = await getCity(cit);
+  return newCity[0];
 }
+
+
+module.exports = { getCitys, editCity, getCity, createTable };
