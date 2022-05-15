@@ -2,19 +2,18 @@ const nav = document.querySelector('nav');
 if(getCurrentUser()) {
   nav.innerHTML = `
    <ul>
+    <li><a href="homepage.html">Home</a></li>
     <li><a href="profile.html">My Profile</a></li>
     <li><a href="search.html">Search</a></li>
     <li><a href="project.html">About</a></li>
-	<li><a href="login.html">Log Out</a></li>
+	<li><a id="logout">Logout</a></li>
   </ul>
   `;
 } else {
   nav.innerHTML = `
    <ul>
-    <li><a href="profile.html">My Profile</a></li>
-    <li><a href="search.html">Search</a></li>
-    <li><a href="project.html">About</a></li>
-	<li><a href="login.html">Log Out</a></li>
+    <li><a href="register.html">Register</a></li>
+	<li><a href="login.html">Login</a></li>
   </ul>
   `
 }
@@ -59,5 +58,5 @@ if(logoutBtn) logoutBtn.addEventListener('click', logout)
 
 export function logout() {
   removeCurrentUser();
-  window.location.href = "login.html";
+  window.location.href = "weather.html";
 }

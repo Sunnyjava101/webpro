@@ -1,28 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Weather App</title>
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles/styles.css">
+  <title>Profile</title>
 </head>
-
 <body>
+  <header>
+    <nav></nav>
+  </header>
+  
   <div class="card">
 	<!--Default placement holders-->
     <div class="weather loading">
-      <h1 class="firstname">First Name</h2>
-      <h1 class="lastname">Lastname</h1>
-      <h1 class="email">Email</div>
+		<main>
+			<section id="profile"></section>
+			<section id="editForm"></section>
+		</main>
     </div>
   </div>
-  <ul>
-	<li><a href="homepage.html">Back</a></li>
-  </ul>
-  <script src="main.js"></script>
-</body>
+  
+  <main>
+    <section id="profile"></section>
+    <section id="editForm"></section>
+  </main>
 
+  <script type="module" src="scripts/main.js"></script>
+  <script type="module" src="scripts/profile.js"></script>
+</body>
 </html>
