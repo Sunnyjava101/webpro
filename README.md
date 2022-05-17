@@ -1,4 +1,2 @@
-# Web Development project for CPS 493
-<br>
-**Weather App**
+# Web Development Project<br>**Weather App**
 
