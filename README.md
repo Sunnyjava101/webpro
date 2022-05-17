@@ -1,2 +1,4 @@
-# webpro
-Web Project for weather app
+# Web Development project for CPS 493
+<br>
+**Weather App**
+
