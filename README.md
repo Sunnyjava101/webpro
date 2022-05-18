@@ -6,7 +6,7 @@
 The Weather App is a website where a person can register/login and check the forecast for their location.
 
 The Weather App is not complete. There was a lot more I was looking forward to implement and include. The site for
-now allows for a user to register/log in, view/delete/edit profile, and search for forecast in any city through an open API. 
+now allows for a user to register/log in, view/delete profile, and search for forecast in any city through an open API. 
 
 ## Future plans
 __Bugs and issues:__ The front end of the website I am pretty satisfied with but I think there still could be some work 
