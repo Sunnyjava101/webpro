@@ -5,32 +5,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Edit City</title>
-    <link href="styles/register.css" rel="stylesheet" type="text/css">
+    <link href="styles/style.css" rel="stylesheet" type="text/css">
 </head>
 <body>
-			<div class="header">
-                <h1>My City</h1>
-            </div>
-			<br><br>
-            <div class="register">
-				<br><br>
+			<header>
+			<nav></nav>
+			</header>
+	
+            <div class="login">
+				<h1>My City</h1>
                 <form method="post" id="city-form">
 					<p class="error"></p>
-				    <label for="city"><b>City</b></label>
                     <input type="text" id="city" name="city" placeholder="Enter City" required>
-					<label for="country"><b>Country</b></label>
                     <input type="text" id="country" name="country" placeholder="Enter Country" required>
-					<label for="zip"><b>Zip Code</b></label>
-                    <input type="text" id="zip" name="zip" placeholder="Enter Zip Code" required>
-                    <input type="submit" name="submit" id="submit" value="Submit"  class="registerbtn">
+                    <input type="submit" name="submit" id="submit" value="Edit City"  class="registerbtn">
                 </form>
             </div>';
-    <footer>
-        <div>
-            <p>Web Development</p>
-        </div>
-    </footer>
-	
 	<script type="module" src="scripts/main.js"></script>
+	<script type="module" src="scripts/city-script.js"></script>
 </body>
 </html>

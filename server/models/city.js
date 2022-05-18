@@ -15,46 +15,40 @@ async function createTable() {
 
 createTable();
 
-let getCitys = async () => {
+let getUsers = async () => {
+  const sql = `SELECT * FROM users`;
+  return await con.query(sql);
+};
+
+let getCities = async () => {
   const sql = `SELECT * FROM cities`;
   return await con.query(sql);
 };
 
-async function getCity(cit) {
+async function getUser(user) {
   let sql;
-  if(cit.cityId) {
-    sql = `SELECT * FROM cities
-      WHERE city_id = ${cit.cityId}
+  if(user.userId) {
+    sql = `SELECT * FROM users
+      WHERE user_id = ${user.userId}
     `;
   } else {
-    sql = `SELECT * FROM cities
-      WHERE city = "${cit.city}"
+    sql = `SELECT * FROM users
+      WHERE username = "${user.username}"
     `;
   }
 
   return await con.query(sql);
 }
 
-async function register(cit) {
- 
+async function register(user) {
+
   const sql = `INSERT INTO cities (city, country)
-    VALUES ("${cit.city}", "${cit.count}")
+    VALUES ("${user.username}", "${user.password}")
   `;
 
   const insert = await con.query(sql);
-  const newCity = await getCity(cit);
-  return newCity[0];
+  const newUser = await getUser(user);
+  return newUser[0];
 }
 
-async function editCity(cit) {
-  const sql = `UPDATE cities SET
-    city = "${cit.cityName}"
-    WHERE city_id = ${cit.cityId}
-  `;
-  const update = await con.query(sql);
-  const newCity = await getCity(cit);
-  return newCity[0];
-}
-
-
-module.exports = { getCitys, editCity, getCity, createTable };
+module.exports = { getUsers, register, getUser, createTable, getCities };
